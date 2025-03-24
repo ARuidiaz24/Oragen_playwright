@@ -2,6 +2,7 @@ from playwright.sync_api import expect
 from pages.login_page import LoginPage
 from fixtures.browser import browser
 
+
 # -------------Login con credenciales correctas-------------
 def test_login_Correct(browser):
     page = browser.new_page()

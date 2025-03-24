@@ -18,6 +18,7 @@ def test_resetPass_Correct(browser):
     #Validacines
     assert url_actual == url_esperada, f"Se esperaba {url_esperada}, pero se obtuvo {url_actual}"
     resetPass_page.reset_confirm()
+    page.screenshot(path="screenshots/resetPass/test_resetPass_Correct.png", full_page=True)
 
     
 
@@ -37,6 +38,8 @@ def test_resetPass_user(browser):
     assert url_actual == url_esperada, f"Se esperaba {url_esperada}, pero se obtuvo {url_actual}"
     resetPass_page.reset_confirm()
 
+    page.screenshot(path="screenshots/resetPass/test_resetPass_user.png", full_page=True)
+
     page.close()
 
 def test_resetPass_null(browser):
@@ -50,6 +53,8 @@ def test_resetPass_null(browser):
 
     expect(alert).to_be_visible()
     expect(alert).to_have_text("Required")
+
+    page.screenshot(path="screenshots/resetPass/test_resetPass_null.png", full_page=True)
 
     page.close()
 
@@ -66,5 +71,9 @@ def test_reset_cancel(browser):
     url_esperada = 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'
 
     assert url_actual == url_esperada, f"Se esperaba {url_esperada}, pero se obtuvo {url_actual}"
+
+    page.wait_for_timeout(2000)
+
+    page.screenshot(path="screenshots/resetPass/test_reset_cancel.png", full_page=True)
 
     page.close()
