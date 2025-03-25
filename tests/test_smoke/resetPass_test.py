@@ -13,8 +13,6 @@ def test_resetPass_Correct(browser):
     url_actual = page.url
     url_esperada = 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/sendPasswordReset'
  
-    
-    page.screenshot(path="screenshots/full_page.png", full_page=True)
     #Validacines
     assert url_actual == url_esperada, f"Se esperaba {url_esperada}, pero se obtuvo {url_actual}"
     resetPass_page.reset_confirm()
