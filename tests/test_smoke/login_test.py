@@ -18,7 +18,7 @@ def test_login_Correct(browser):
     assert url_actual == url_esperada, f"Se esperaba {url_esperada}, pero se obtuvo {url_actual}"
 
     page.wait_for_timeout(2000) 
-    page.screenshot(path="tests/test_smoke/screenshots/login/test_login_Correct.png", full_page=True)
+    page.screenshot(path="screenshots/login/test_login_Correct.png", full_page=True)
 
     page.close()
 
@@ -40,7 +40,7 @@ def test_login_password(browser):
     expect(text_alert).to_have_text("Invalid credentials")
 
     page.wait_for_timeout(1000) 
-    page.screenshot(path="tests/test_smoke/screenshots/login/test_login_password.png", full_page=True)
+    page.screenshot(path="screenshots/login/test_login_password.png", full_page=True)
 
     page.close()
 
@@ -62,7 +62,7 @@ def test_login_user(browser):
     expect(text_alert).to_have_text("Invalid credentials")
 
     page.wait_for_timeout(1000) 
-    page.screenshot(path="tests/test_smoke/screenshots/login/test_login_user.png", full_page=True)
+    page.screenshot(path="screenshots/login/test_login_user.png", full_page=True)
 
     page.close()
 
@@ -86,7 +86,7 @@ def test_login_null(browser):
     expect(alert_password).to_have_text("Required")
 
     page.wait_for_timeout(1000) 
-    page.screenshot(path="tests/test_smoke/screenshots/login/test_login_null.png", full_page=True)
+    page.screenshot(path="screenshots/login/test_login_null.png", full_page=True)
 
     page.close()
 
@@ -108,6 +108,6 @@ def test_login_recor_password(browser):
     assert url_actual == url_esperada, f"Se esperaba {url_esperada}, pero se obtuvo {url_actual}"
 
     page.wait_for_timeout(1000) 
-    page.screenshot(path="tests/test_smoke/screenshots/login/test_login_recor_password.png", full_page=True)
+    page.screenshot(path="screenshots/login/test_login_recor_password.png", full_page=True)
 
     page.close()
